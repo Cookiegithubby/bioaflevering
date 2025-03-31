@@ -1,0 +1,361 @@
+/* General body styling */
+body {
+    padding-top: 60px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    font-size: 16px; 
+    font-family: "Georgia", serif;
+    background-color: #333;
+    color: white;
+}
+
+/* Top bar styling */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #202020;
+    color: white;
+    padding: 0.625rem 1rem;
+    box-sizing: border-box; 
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0 0.625rem;
+    white-space: nowrap; 
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 2.5rem; 
+    width: auto;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Main content styling */
+.main-content {
+    padding: 1.25rem 5%; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.movie-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr)); 
+    gap: 1.25rem;
+    padding: 1.25rem 5%; 
+}
+
+.movie-gallery img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    border-radius: 0.625rem; 
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.movie-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Movies page styles */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px); /* Fixed width for each movie card */
+    gap: 1.25rem; /* Spacing between items */
+    justify-content: center; /* Center the grid items */
+    padding: 1.25rem; /* Padding around the grid */
+}
+
+.movie-card {
+    width: 200px; /* Fixed width for movie cards */
+    text-align: center;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card img {
+    width: 100%; /* Ensure the image takes up the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0.625rem;
+}
+
+.movie-card:hover {
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+/* Movie details page styles */
+.movie-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem;
+}
+
+.movie-info {
+    width: 60%;
+}
+
+.movie-info img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.seat-selection {
+    width: 35%;
+    text-align: center;
+}
+
+.seats-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.seat {
+    width: 2rem;
+    height: 2rem;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #999;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.seat:hover {
+    background-color: #666;
+    color: white;
+}
+
+/* Responsive typography */
+h1 {
+    font-size: 2rem; 
+    margin-bottom: 1.25rem; 
+}
+
+/* General content styling */
+.content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.content h1, .content h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Contact form styling */
+.contact-form, .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form label, .newsletter-form label {
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea, .newsletter-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form button, .newsletter-form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover, .newsletter-form button:hover {
+    background-color: #555;
+}
+
+/* Success message styling */
+.success-message {
+    margin-top: 1rem;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0.5rem;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+.search-bar button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+/* Filter section styling */
+.filter-section {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#filter-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: -16px; 
+}
+
+#filter-button:hover {
+    background-color: #555;
+}
+
+#filter-panel {
+    background-color: #333;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.25rem;
+    text-align: left;
+}
+
+#filter-panel h3, #filter-panel h4 {
+    margin: 0.5rem 0;
+}
+
+#filter-panel label {
+    display: block;
+    margin: 0.25rem 0;
+}
+
+#apply-filters {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#apply-filters:hover {
+    background-color: #555;
+}
+
+/* Search filter container styling */
+.search-filter-container {
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 1rem; /* Add spacing between the search bar and filter button */
+    margin: 1rem 0; /* Add some margin around the container */
+}
+
+#search-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 300px; /* Set a fixed width for the search bar */
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 48rem) { 
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-bar a {
+        margin: 0.3125rem 0; 
+    }
+
+    .movie-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr)); 
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr)); 
+    }
+
+    h1 {
+        font-size: 1.5rem; 
+    }
+}
